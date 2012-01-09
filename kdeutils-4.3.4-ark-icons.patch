@@ -1,0 +1,11 @@
+diff -up kdeutils-4.3.5/ark/CMakeLists.txt.me kdeutils-4.3.5/ark/CMakeLists.txt
+--- kdeutils-4.3.5/ark/CMakeLists.txt.me	2010-06-24 19:00:14.000000000 +0200
++++ kdeutils-4.3.5/ark/CMakeLists.txt	2010-06-24 19:01:39.000000000 +0200
+@@ -4,3 +4,7 @@ add_subdirectory( part )
+ add_subdirectory( app )
+ add_subdirectory( plugins )
+ add_subdirectory( kerfuffle )
++
++kde4_add_app_icon(krdc_SRCS "hi*-apps-ark.png")
++kde4_install_icons( ${ICON_INSTALL_DIR} )
++

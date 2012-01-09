@@ -1,0 +1,1445 @@
+diff -Nur kdeutils-4.3.4/ark/app/ark_addtoservicemenu.desktop kdeutils-4.3.5/ark/app/ark_addtoservicemenu.desktop
+--- kdeutils-4.3.4/ark/app/ark_addtoservicemenu.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/app/ark_addtoservicemenu.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -7,6 +7,7 @@
+ X-KDE-Submenu[ar]=اضغط
+ X-KDE-Submenu[bg]=Компресиране
+ X-KDE-Submenu[ca]=Compressió
++X-KDE-Submenu[ca@valencia]=Compressió
+ X-KDE-Submenu[cs]=Zkomprimovat
+ X-KDE-Submenu[da]=Komprimér
+ X-KDE-Submenu[de]=Komprimieren
+@@ -57,6 +58,7 @@
+ Name=Here
+ Name[ar]=هنا
+ Name[ca]=Aquí
++Name[ca@valencia]=Ací
+ Name[cs]=Sem
+ Name[da]=Her
+ Name[de]=Hier
+@@ -99,6 +101,7 @@
+ Name=As ZIP Archive
+ Name[ar]=ك أرشيف ZIP
+ Name[ca]=Com a arxiu ZIP
++Name[ca@valencia]=Com a arxiu ZIP
+ Name[cs]=Jako ZIP archív
+ Name[da]=Som ZIP-arkiv
+ Name[de]=Als ZIP-Archiv
+@@ -141,6 +144,7 @@
+ Name=As RAR Archive
+ Name[ar]=كأرشيف RAR
+ Name[ca]=Com a arxiu RAR
++Name[ca@valencia]=Com a arxiu RAR
+ Name[cs]=Jako RAR archív
+ Name[da]=Som RAR-arkiv
+ Name[de]=Als RAR-Archiv
+@@ -183,6 +187,7 @@
+ Name=As ZIP/TAR Archive
+ Name[ar]=كأرشيف  ZIP/TAR
+ Name[ca]=Com a arxiu ZIP/TAR
++Name[ca@valencia]=Com a arxiu ZIP/TAR
+ Name[cs]=Jako ZIP/TAR archív
+ Name[da]=Som ZIP-/TAR-arkiv
+ Name[de]=Als ZIP/TAR-Archiv
+@@ -225,6 +230,7 @@
+ Name=Compress To...
+ Name[ar]=اضغط إلى...
+ Name[ca]=Comprimeix a...
++Name[ca@valencia]=Comprimeix a...
+ Name[cs]=Zkomprimovat do...
+ Name[da]=Komprimér til...
+ Name[de]=Komprimieren nach ...
+diff -Nur kdeutils-4.3.4/ark/app/ark.desktop kdeutils-4.3.5/ark/app/ark.desktop
+--- kdeutils-4.3.4/ark/app/ark.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/app/ark.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -1,11 +1,12 @@
+ [Desktop Entry]
+-MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;
++MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;
+ GenericName=Archiving Tool
+ GenericName[af]=Argiveer Program
+ GenericName[ar]=أداة أرشفة
+ GenericName[bg]=Работа с архиви
+ GenericName[br]=Ostilh merañ an Dielloù
+ GenericName[ca]=Eina d'arxivament
++GenericName[ca@valencia]=Eina d'arxivament
+ GenericName[cs]=Archivační nástroj
+ GenericName[cy]=Erfyn Archifo 
+ GenericName[da]=Arkiveringsværktøj
+@@ -70,6 +71,7 @@
+ Name[bg]=Ark
+ Name[br]=Ark
+ Name[ca]=Ark
++Name[ca@valencia]=Ark
+ Name[cs]=Ark
+ Name[cy]=Ark
+ Name[da]=Ark
+diff -Nur kdeutils-4.3.4/ark/app/ark_dndextract.desktop kdeutils-4.3.5/ark/app/ark_dndextract.desktop
+--- kdeutils-4.3.4/ark/app/ark_dndextract.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/app/ark_dndextract.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -5,6 +5,7 @@
+ Name=Ark Extract Here
+ Name[ar]=أرك استخرج هنا
+ Name[ca]=Extracció de l'Ark aquí
++Name[ca@valencia]=Extracció de l'Ark ací
+ Name[cs]=Rozbalit Arkem sem
+ Name[da]=Pak ud med Ark her
+ Name[de]=Ark - Hierher auspacken
+@@ -40,4 +41,4 @@
+ Name[x-test]=xxArk Extract Herexx
+ Name[zh_CN]=Ark 在此解压缩
+ Name[zh_TW]=在此解壓縮
+-MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;
++MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;
+diff -Nur kdeutils-4.3.4/ark/app/ark_servicemenu.desktop kdeutils-4.3.5/ark/app/ark_servicemenu.desktop
+--- kdeutils-4.3.4/ark/app/ark_servicemenu.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/app/ark_servicemenu.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Type=Service
+ ServiceTypes=KonqPopupMenu/Plugin
+-MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;
++MimeType=application/x-gzip;application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/zip;application/x-bzip;application/x-rar;application/x-tarz;application/x-bzip2;application/x-java-archive;application/x-deb;application/x-7z-compressed;application/x-compress;application/x-zip-compressed;application/x-lzma;application/x-servicepack;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;
+ Actions=arkAutoExtractHere;arkExtractTo;arkExtractHere;
+ #X-KDE-Submenu=Extract me beautiful
+ X-KDE-Priority=TopLevel
+@@ -12,6 +12,7 @@
+ Name=Extract Archive Here
+ Name[ar]=فك الأرشيف هنا
+ Name[ca]=Extreu l'arxiu aquí
++Name[ca@valencia]=Extreu l'arxiu ací
+ Name[cs]=Rozbalit archív sem
+ Name[da]=Udpak arkiv her
+ Name[de]=Archiv hierher auspacken
+@@ -54,6 +55,7 @@
+ Name=Extract Archive To...
+ Name[ar]=فك الأرشيف إلى...
+ Name[ca]=Extreu l'arxiu a...
++Name[ca@valencia]=Extreu l'arxiu a...
+ Name[cs]=Rozbalit archív do...
+ Name[da]=Udpak arkiv til...
+ Name[de]=Archiv auspacken nach ...
+@@ -96,6 +98,7 @@
+ Name=Extract Archive Here, Autodetect Subfolder
+ Name[ar]=فك الأرشيف هنا ، تعرف تلقائي للمجلدات الفرعية
+ Name[ca]=Extreu l'arxiu aquí, detecta automàticament la subcarpeta
++Name[ca@valencia]=Extreu l'arxiu ací, detecta automàticament la subcarpeta
+ Name[cs]=Rozbalit archív sem, automaticky detekovat podsložku
+ Name[da]=Udpak arkiv her og find automatisk undermappe
+ Name[de]=Archiv hierher auspacken, Unterordner selbstständig ermitteln
+diff -Nur kdeutils-4.3.4/ark/kerfuffle/cliinterface.cpp kdeutils-4.3.5/ark/kerfuffle/cliinterface.cpp
+--- kdeutils-4.3.4/ark/kerfuffle/cliinterface.cpp	2009-10-02 10:21:55.000000000 +0200
++++ kdeutils-4.3.5/ark/kerfuffle/cliinterface.cpp	2010-01-21 21:47:51.000000000 +0100
+@@ -231,10 +231,11 @@
+         return false;
+     }
+ 
+-    QString globalWorkdir = options.value("GlobalWorkDir").toString();
+-    if (!globalWorkdir.isEmpty()) {
+-        kDebug(1601) << "GlobalWorkDir is set, changing dir to " << globalWorkdir;
+-        QDir::setCurrent(globalWorkdir);
++    const QString globalWorkDir = options.value("GlobalWorkDir").toString();
++    const QDir workDir = globalWorkDir.isEmpty() ? QDir::current() : QDir(globalWorkDir);
++    if (!globalWorkDir.isEmpty()) {
++        kDebug(1601) << "GlobalWorkDir is set, changing dir to " << globalWorkDir;
++        QDir::setCurrent(globalWorkDir);
+     }
+ 
+     //start preparing the argument list
+@@ -242,7 +243,7 @@
+ 
+     //now replace the various elements in the list
+     for (int i = 0; i < args.size(); ++i) {
+-        QString argument = args.at(i);
++        const QString argument = args.at(i);
+         kDebug(1601) << "Processing argument " << argument;
+ 
+         if (argument == "$Archive") {
+@@ -252,8 +253,12 @@
+         if (argument == "$Files") {
+             args.removeAt(i);
+             for (int j = 0; j < files.count(); ++j) {
+-
+-                QString relativeName = QDir::current().relativeFilePath(files.at(j));
++                // #191821: workDir must be used instead of QDir::current()
++                //          so that symlinks aren't resolved automatically
++                // TODO: this kind of call should be moved upwards in the
++                //       class hierarchy to avoid code duplication
++                const QString relativeName =
++                    workDir.relativeFilePath(files.at(j));
+ 
+                 args.insert(i + j, relativeName);
+                 ++i;
+@@ -498,6 +503,24 @@
+     }
+ 
+     if (m_mode == List) {
++        if (checkForErrorMessage(line, WrongPasswordPatterns)) {
++            kDebug(1601) << "Wrong password!";
++            error(i18n("Incorrect password."));
++            setPassword(QString());
++            failOperation();
++            return;
++        }
++
++        if (checkForErrorMessage(line, ExtractionFailedPatterns)) {
++            kDebug(1601) << "Error in extraction!!";
++            error(i18n("Extraction failed because of an unexpected error."));
++            failOperation();
++            return;
++        }
++
++        if (handleFileExistsMessage(line))
++            return;
++
+         readListLine(line);
+         return;
+     }
+diff -Nur kdeutils-4.3.4/ark/kerfuffle/extractiondialog.cpp kdeutils-4.3.5/ark/kerfuffle/extractiondialog.cpp
+--- kdeutils-4.3.4/ark/kerfuffle/extractiondialog.cpp	2009-08-27 10:17:33.000000000 +0200
++++ kdeutils-4.3.5/ark/kerfuffle/extractiondialog.cpp	2010-01-21 21:47:51.000000000 +0100
+@@ -165,7 +165,7 @@
+     }
+ }
+ 
+-bool ExtractionDialog::extractAllFiles()
++bool ExtractionDialog::extractAllFiles() const
+ {
+     return m_ui->allFilesButton->isChecked();
+ }
+@@ -175,12 +175,12 @@
+     m_ui->autoSubfolders->setChecked(value);
+ }
+ 
+-bool ExtractionDialog::autoSubfolders()
++bool ExtractionDialog::autoSubfolders() const
+ {
+     return m_ui->autoSubfolders->isChecked();
+ }
+ 
+-bool ExtractionDialog::extractToSubfolder()
++bool ExtractionDialog::extractToSubfolder() const
+ {
+     return m_ui->singleFolderGroup->isChecked();
+ }
+@@ -195,18 +195,17 @@
+     m_ui->preservePaths->setChecked(value);
+ }
+ 
+-bool ExtractionDialog::preservePaths()
++bool ExtractionDialog::preservePaths() const
+ {
+     return m_ui->preservePaths->isChecked();
+ }
+ 
+-
+-bool ExtractionDialog::openDestinationAfterExtraction()
++bool ExtractionDialog::openDestinationAfterExtraction() const
+ {
+     return m_ui->openFolderCheckBox->isChecked();
+ }
+ 
+-KUrl ExtractionDialog::destinationDirectory()
++KUrl ExtractionDialog::destinationDirectory() const
+ {
+     if (extractToSubfolder()) {
+         return url().pathOrUrl(KUrl::AddTrailingSlash) + subfolder() + '/';
+diff -Nur kdeutils-4.3.4/ark/kerfuffle/extractiondialog.h kdeutils-4.3.5/ark/kerfuffle/extractiondialog.h
+--- kdeutils-4.3.4/ark/kerfuffle/extractiondialog.h	2009-08-27 10:17:33.000000000 +0200
++++ kdeutils-4.3.5/ark/kerfuffle/extractiondialog.h	2010-01-21 21:47:51.000000000 +0100
+@@ -44,12 +44,12 @@
+     void setOpenDestinationFolderAfterExtraction(bool);
+     void setAutoSubfolder(bool value);
+ 
+-    bool extractAllFiles();
+-    bool openDestinationAfterExtraction();
+-    bool extractToSubfolder();
+-    bool autoSubfolders();
+-    bool preservePaths();
+-    KUrl destinationDirectory();
++    bool extractAllFiles() const;
++    bool openDestinationAfterExtraction() const;
++    bool extractToSubfolder() const;
++    bool autoSubfolders() const;
++    bool preservePaths() const;
++    KUrl destinationDirectory() const;
+     QString subfolder() const;
+     virtual void accept();
+ 
+diff -Nur kdeutils-4.3.4/ark/kerfuffle/kerfufflePlugin.desktop kdeutils-4.3.5/ark/kerfuffle/kerfufflePlugin.desktop
+--- kdeutils-4.3.4/ark/kerfuffle/kerfufflePlugin.desktop	2009-10-30 13:32:31.000000000 +0100
++++ kdeutils-4.3.5/ark/kerfuffle/kerfufflePlugin.desktop	2010-01-21 21:47:51.000000000 +0100
+@@ -5,6 +5,7 @@
+ Comment[ar]=ملحق للتحكم بهيئات الأرشيف لمكتبة Kerfuffle
+ Comment[bg]=Приствка за работа с архиви за Kerfuffle
+ Comment[ca]=Connector per gestionar els formats d'arxiu per la biblioteca Kerfuffle
++Comment[ca@valencia]=Connector per gestionar els formats d'arxiu per la biblioteca Kerfuffle
+ Comment[cs]=Modul pro správu formátů archivů pro knihovnu Kerfuffle
+ Comment[da]=Plugin til håndtering af arkivformater til Kerfuffle-biblioteket
+ Comment[de]=Modul zum Umgang mit Archivformaten der Kerfuffle Bibliothek
+diff -Nur kdeutils-4.3.4/ark/part/ark_part.desktop kdeutils-4.3.5/ark/part/ark_part.desktop
+--- kdeutils-4.3.4/ark/part/ark_part.desktop	2009-10-02 10:21:55.000000000 +0200
++++ kdeutils-4.3.5/ark/part/ark_part.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -6,6 +6,7 @@
+ Name[bg]=Архиватор
+ Name[br]=Dieller
+ Name[ca]=Arxivador
++Name[ca@valencia]=Arxivador
+ Name[cs]=Archivátor
+ Name[cy]=Archifydd
+ Name[da]=Arkivbehandler
+@@ -70,6 +71,7 @@
+ Comment[bg]=Работа с архиви
+ Comment[br]=Ostilh merañ an dielloù
+ Comment[ca]=Eina per a treballar amb arxius
++Comment[ca@valencia]=Eina per a treballar amb arxius
+ Comment[cs]=Program pro práci s archívy
+ Comment[cy]=Erfyn Triniaeth Archif
+ Comment[da]=Arkivbehandlingsværktøj
+diff -Nur kdeutils-4.3.4/ark/part/arkviewer.cpp kdeutils-4.3.5/ark/part/arkviewer.cpp
+--- kdeutils-4.3.4/ark/part/arkviewer.cpp	2009-11-27 14:04:31.000000000 +0100
++++ kdeutils-4.3.5/ark/part/arkviewer.cpp	2010-01-21 21:47:50.000000000 +0100
+@@ -107,7 +107,17 @@
+     if (viewer.isNull()) {
+         KMessageBox::sorry(parent, i18n("The internal viewer cannot preview this file."));
+     } else if (viewer->hasServiceType("KParts/ReadOnlyPart")) {
+-        ArkViewer(parent).viewInInternalViewer(filename);
++        ArkViewer *internalViewer = new ArkViewer(parent);
++
++        internalViewer->hide();
++
++        if (!internalViewer->viewInInternalViewer(filename)) {
++            KMessageBox::sorry(parent, i18n("The internal viewer cannot preview this file."));
++            delete internalViewer;
++            return;
++        }
++
++        internalViewer->show();
+     } else { // Try to open it in an external application
+         KUrl fileUrl(filename);
+         KRun::runUrl(fileUrl, KMimeType::findByUrl(fileUrl, 0, true)->name(), parent);
+@@ -167,18 +177,19 @@
+              m_widget,
+              this);
+ 
+-    if (m_part) {
+-        if (m_part->browserExtension())
+-            connect(m_part->browserExtension(),
+-                    SIGNAL(openUrlRequestDelayed(KUrl, KParts::OpenUrlArguments, KParts::BrowserArguments)),
+-                    SLOT(slotOpenUrlRequestDelayed(KUrl, KParts::OpenUrlArguments, KParts::BrowserArguments)));
+-
+-        m_part->openUrl(filename);
+-        exec();
+-        return true;
+-    } else {
++    if (!m_part) {
+         return false;
+     }
++
++    if (m_part->browserExtension()) {
++        connect(m_part->browserExtension(),
++                SIGNAL(openUrlRequestDelayed(KUrl, KParts::OpenUrlArguments, KParts::BrowserArguments)),
++                SLOT(slotOpenUrlRequestDelayed(KUrl, KParts::OpenUrlArguments, KParts::BrowserArguments)));
++    }
++
++    m_part->openUrl(filename);
++
++    return true;
+ }
+ 
+ void ArkViewer::slotOpenUrlRequestDelayed(const KUrl& url, const KParts::OpenUrlArguments& arguments, const KParts::BrowserArguments& browserArguments)
+diff -Nur kdeutils-4.3.4/ark/part/part.cpp kdeutils-4.3.5/ark/part/part.cpp
+--- kdeutils-4.3.4/ark/part/part.cpp	2009-10-30 13:32:31.000000000 +0100
++++ kdeutils-4.3.5/ark/part/part.cpp	2010-01-21 21:47:50.000000000 +0100
+@@ -624,36 +624,37 @@
+ 
+ void Part::slotAddFiles(const QStringList& filesToAdd, const QString& path)
+ {
++    if (filesToAdd.isEmpty()) {
++        return;
++    }
++
+     kDebug(1601) << "Adding " << filesToAdd << " to " << path;
+     kDebug(1601) << "Warning, for now the path argument is not implemented";
+ 
+-    if (!filesToAdd.isEmpty()) {
+-
+-        QStringList cleanFilesToAdd(filesToAdd);
+-        for (int i = 0; i < cleanFilesToAdd.size(); ++i) {
+-            QString& file = cleanFilesToAdd[i];
+-            if (QFileInfo(file).isDir()) {
+-                if (!file.endsWith('/')) file += '/';
+-            }
++    QStringList cleanFilesToAdd(filesToAdd);
++    for (int i = 0; i < cleanFilesToAdd.size(); ++i) {
++        QString& file = cleanFilesToAdd[i];
++        if (QFileInfo(file).isDir()) {
++            if (!file.endsWith('/')) file += '/';
+         }
++    }
+ 
+-        CompressionOptions options;
++    CompressionOptions options;
+ 
+-        QString firstPath = cleanFilesToAdd.first();
+-        if (firstPath.right(1) == "/") firstPath.chop(1);
+-        firstPath = QFileInfo(firstPath).dir().absolutePath();
+-
+-        kDebug(1601) << "Detected relative path to be " << firstPath;
+-        options["GlobalWorkDir"] = firstPath;
+-
+-        AddJob *job = m_model->addFiles(cleanFilesToAdd, options);
+-        if (!job) return;
+-
+-        connect(job, SIGNAL(result(KJob*)),
+-                this, SLOT(slotAddFilesDone(KJob*)));
+-        registerJob(job);
+-        job->start();
+-    }
++    QString firstPath = cleanFilesToAdd.first();
++    if (firstPath.right(1) == "/") firstPath.chop(1);
++    firstPath = QFileInfo(firstPath).dir().absolutePath();
++
++    kDebug(1601) << "Detected relative path to be " << firstPath;
++    options["GlobalWorkDir"] = firstPath;
++
++    AddJob *job = m_model->addFiles(cleanFilesToAdd, options);
++    if (!job) return;
++
++    connect(job, SIGNAL(result(KJob*)),
++            this, SLOT(slotAddFilesDone(KJob*)));
++    registerJob(job);
++    job->start();
+ }
+ 
+ void Part::slotAddFiles()
+diff -Nur kdeutils-4.3.4/ark/plugins/bk/kerfuffle_bk.desktop kdeutils-4.3.5/ark/plugins/bk/kerfuffle_bk.desktop
+--- kdeutils-4.3.4/ark/plugins/bk/kerfuffle_bk.desktop	2009-10-30 13:32:31.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/bk/kerfuffle_bk.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -15,6 +15,7 @@
+ Name[ar]=kerfuffle_bk
+ Name[bg]=kerfuffle_bk
+ Name[ca]=kerfuffle_bk
++Name[ca@valencia]=kerfuffle_bk
+ Name[cs]=kerfuffle_bk
+ Name[da]=kerfuffle_bk
+ Name[de]=kerfuffle_bk
+@@ -64,6 +65,7 @@
+ Comment[ar]=bkisofs ملحق لـ Kerfuffle
+ Comment[bg]=Приставка bkisofs за Kerfuffle
+ Comment[ca]=Connector del bkisofs pel Kerfuffle
++Comment[ca@valencia]=Connector del bkisofs pel Kerfuffle
+ Comment[cs]=bkisofs modul pro Kerfuffle
+ Comment[da]=bkisofs-plugin til Kerfuffle
+ Comment[de]=bkisofs Modul für Kerfuffle
+diff -Nur kdeutils-4.3.4/ark/plugins/cli7zplugin/kerfuffle_7z.desktop kdeutils-4.3.5/ark/plugins/cli7zplugin/kerfuffle_7z.desktop
+--- kdeutils-4.3.4/ark/plugins/cli7zplugin/kerfuffle_7z.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/cli7zplugin/kerfuffle_7z.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=7zip archive plugin
+ Name[ar]=ملحق أرشيف 7zip
+ Name[ca]=Connector per arxius 7zip
++Name[ca@valencia]=Connector per arxius 7zip
+ Name[cs]=Modul pro 7zip archív
+ Name[da]=7zip arkiv-plugin
+ Name[de]=7zip-Archiv-Modul
+diff -Nur kdeutils-4.3.4/ark/plugins/cliplugin/kerfuffle_cli.desktop kdeutils-4.3.5/ark/plugins/cliplugin/kerfuffle_cli.desktop
+--- kdeutils-4.3.4/ark/plugins/cliplugin/kerfuffle_cli.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/cliplugin/kerfuffle_cli.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=TODO archive plugin
+ Name[ar]=ملحق أرشيف TODO
+ Name[ca]=Connector per arxius TODO
++Name[ca@valencia]=Connector per arxius TODO
+ Name[da]=Arkiv-plugin for gøremål
+ Name[de]=TODO-Archiv-Modul
+ Name[el]=πρόσθετο αρχειοθήκης προς υλοποίηση
+diff -Nur kdeutils-4.3.4/ark/plugins/clirarplugin/cliplugin.cpp kdeutils-4.3.5/ark/plugins/clirarplugin/cliplugin.cpp
+--- kdeutils-4.3.4/ark/plugins/clirarplugin/cliplugin.cpp	2009-11-27 14:04:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/clirarplugin/cliplugin.cpp	2010-01-21 21:47:50.000000000 +0100
+@@ -72,7 +72,7 @@
+         p[AddArgs] = QStringList() << "a" << "$Archive" << "$Files";
+ 
+         p[WrongPasswordPatterns] = QStringList() << "password incorrect";
+-        p[ExtractionFailedPatterns] = QStringList() << "CRC failed";
++        p[ExtractionFailedPatterns] = QStringList() << "CRC failed" << "Cannot find volume";
+     }
+ 
+     return p;
+diff -Nur kdeutils-4.3.4/ark/plugins/clirarplugin/kerfuffle_clirar.desktop kdeutils-4.3.5/ark/plugins/clirarplugin/kerfuffle_clirar.desktop
+--- kdeutils-4.3.4/ark/plugins/clirarplugin/kerfuffle_clirar.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/clirarplugin/kerfuffle_clirar.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=RAR archive plugin
+ Name[ar]=ملحق أرشيف RAR
+ Name[ca]=Connector per arxius RAR
++Name[ca@valencia]=Connector per arxius RAR
+ Name[cs]=Modul pro RAR archív
+ Name[da]=RAR arkiv-plugin
+ Name[de]=RAR-Archiv-Modul
+diff -Nur kdeutils-4.3.4/ark/plugins/clizipplugin/cliplugin.cpp kdeutils-4.3.5/ark/plugins/clizipplugin/cliplugin.cpp
+--- kdeutils-4.3.4/ark/plugins/clizipplugin/cliplugin.cpp	2009-11-27 14:04:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/clizipplugin/cliplugin.cpp	2010-01-21 21:47:50.000000000 +0100
+@@ -22,14 +22,15 @@
+ #include "kerfuffle/cliinterface.h"
+ #include "kerfuffle/archivefactory.h"
+ 
++#include <KDebug>
++
++#include <QDateTime>
+ #include <QDir>
+ #include <QLatin1String>
+ #include <QRegExp>
+ #include <QString>
+ #include <QStringList>
+ 
+-#include <KDebug>
+-
+ using namespace Kerfuffle;
+ 
+ class CliPlugin: public CliInterface
+@@ -54,7 +55,7 @@
+             p[ExtractProgram] = "unzip";
+             p[DeleteProgram] = p[AddProgram] = "zip";
+ 
+-            p[ListArgs] = QStringList() << "-l" << "$Archive";
++            p[ListArgs] = QStringList() << "-l" << "-T" << "$Archive";
+             p[ExtractArgs] = QStringList() << "$PreservePathSwitch" << "$PasswordSwitch" << "$Archive" << "$Files";
+             p[PreservePathSwitch] = QStringList() << "" << "-j";
+             p[PasswordSwitch] = QStringList() << "-P$Password";
+@@ -90,7 +91,7 @@
+ 
+     bool readListLine(const QString &line) {
+         static QRegExp entryPattern(
+-            "^(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(.+)$");
++            "^(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\d{8}).(\\d{6})\\s+(.+)$");
+ 
+         int i;
+         switch (m_status) {
+@@ -109,6 +110,11 @@
+                 if (status[0].isUpper())
+                     e[IsPasswordProtected] = true;
+                 e[CompressedSize] = entryPattern.cap(6).toInt();
++
++                const QDateTime ts(QDate::fromString(entryPattern.cap(8), "yyyyMMdd"),
++                                   QTime::fromString(entryPattern.cap(9), "hhmmss"));
++                e[Timestamp] = ts;
++
+                 e[FileName] = e[InternalID] = entryPattern.cap(10);
+                 entry(e);
+             }
+diff -Nur kdeutils-4.3.4/ark/plugins/clizipplugin/kerfuffle_clizip.desktop kdeutils-4.3.5/ark/plugins/clizipplugin/kerfuffle_clizip.desktop
+--- kdeutils-4.3.4/ark/plugins/clizipplugin/kerfuffle_clizip.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/clizipplugin/kerfuffle_clizip.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=ZIP archive plugin
+ Name[ar]=ملحق أرشيف ZIP
+ Name[ca]=Connector per arxius ZIP
++Name[ca@valencia]=Connector per arxius ZIP
+ Name[cs]=Modul pro ZIP archív
+ Name[da]=ZIP arkiv-plugin
+ Name[de]=ZIP-Archiv-Modul
+diff -Nur kdeutils-4.3.4/ark/plugins/karchiveplugin/kerfuffle_karchive.desktop kdeutils-4.3.5/ark/plugins/karchiveplugin/kerfuffle_karchive.desktop
+--- kdeutils-4.3.4/ark/plugins/karchiveplugin/kerfuffle_karchive.desktop	2009-10-30 13:32:31.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/karchiveplugin/kerfuffle_karchive.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name[ar]=kerfuffle_karchive
+ Name[bg]=kerfuffle_karchive
+ Name[ca]=kerfuffle_karchive
++Name[ca@valencia]=kerfuffle_karchive
+ Name[cs]=kerfuffle_karchive
+ Name[da]=kerfuffle_karchive
+ Name[de]=kerfuffle_karchive
+@@ -63,6 +64,7 @@
+ Comment[ar]=KArchive ملحق لـ Kerfuffle
+ Comment[bg]=Приставка KArchive за Kerfuffle
+ Comment[ca]=Connector del KArchive pel Kerfuffle
++Comment[ca@valencia]=Connector del KArchive pel Kerfuffle
+ Comment[cs]=KArchive modul pro Kerfuffle
+ Comment[da]=KArchive-plugin til Kerfuffle
+ Comment[de]=KArchive-Modul für Kerfuffle
+diff -Nur kdeutils-4.3.4/ark/plugins/libarchive/kerfuffle_libarchive.desktop kdeutils-4.3.5/ark/plugins/libarchive/kerfuffle_libarchive.desktop
+--- kdeutils-4.3.4/ark/plugins/libarchive/kerfuffle_libarchive.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/libarchive/kerfuffle_libarchive.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -15,6 +15,7 @@
+ Name[ar]=kerfuffle_libarchive
+ Name[bg]=kerfuffle_libarchive
+ Name[ca]=kerfuffle_libarchive
++Name[ca@valencia]=kerfuffle_libarchive
+ Name[cs]=kerfuffle_libarchive
+ Name[da]=kerfuffle_libarchive
+ Name[de]=kerfuffle_libarchive
+@@ -64,6 +65,7 @@
+ Comment[ar]=LibArchive ملحق لـ Kerfuffle
+ Comment[bg]=Приставка LibArchive за Kerfuffle
+ Comment[ca]=Connector del LibArchive pel Kerfuffle
++Comment[ca@valencia]=Connector del LibArchive pel Kerfuffle
+ Comment[cs]=LibArchive modul pro Kerfuffle
+ Comment[da]=LibArchive-plugin til Kerfuffle
+ Comment[de]=LibArchive-Modul für Kerfuffle
+@@ -107,4 +109,4 @@
+ Comment[x-test]=xxLibArchive Plugin for Kerfufflexx
+ Comment[zh_CN]=Kerfuffle 的 LibArchive 插件
+ Comment[zh_TW]=Kerfuffle 的 LibArchive 外掛程式
+-MimeType=application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/x-tarz;application/x-deb;
++MimeType=application/x-tar;application/x-compressed-tar;application/x-bzip-compressed-tar;application/x-tarz;application/x-deb;application/x-xz-compressed-tar;application/x-lzma-compressed-tar;
+diff -Nur kdeutils-4.3.4/ark/plugins/libarchive/libarchivehandler.cpp kdeutils-4.3.5/ark/plugins/libarchive/libarchivehandler.cpp
+--- kdeutils-4.3.4/ark/plugins/libarchive/libarchivehandler.cpp	2009-07-29 13:12:56.000000000 +0200
++++ kdeutils-4.3.5/ark/plugins/libarchive/libarchivehandler.cpp	2010-01-21 21:47:50.000000000 +0100
+@@ -46,7 +46,8 @@
+         : ReadWriteArchiveInterface(filename, parent),
+         m_cachedArchiveEntryCount(0),
+         m_emitNoEntries(false),
+-        m_extractedFilesSize(0)
++        m_extractedFilesSize(0),
++        m_workDir(QDir::current())
+ {
+ }
+ 
+@@ -296,14 +297,13 @@
+     int ret;
+     const bool creatingNewFile = !QFileInfo(filename()).exists();
+ 
+-    QString tempFilename = filename() + ".arkWriting";
+-
+-    kDebug(1601) << "Current path " << QDir::currentPath();
++    const QString tempFilename = filename() + ".arkWriting";
+ 
+-    QString globalWorkdir = options.value("GlobalWorkDir").toString();
+-    if (!globalWorkdir.isEmpty()) {
+-        kDebug(1601) << "GlobalWorkDir is set, changing dir to " << globalWorkdir;
+-        QDir::setCurrent(globalWorkdir);
++    const QString globalWorkDir = options.value("GlobalWorkDir").toString();
++    if (!globalWorkDir.isEmpty()) {
++        kDebug(1601) << "GlobalWorkDir is set, changing dir to " << globalWorkDir;
++        m_workDir.setPath(globalWorkDir);
++        QDir::setCurrent(globalWorkDir);
+     }
+ 
+     m_writtenFiles.clear();
+@@ -654,7 +654,12 @@
+     int header_response;
+ 
+     const bool trailingSlash = fileName.endsWith('/');
+-    QString relativeName = QDir::current().relativeFilePath(fileName) + (trailingSlash ? "/" : "");
++
++    // #191821: workDir must be used instead of QDir::current()
++    //          so that symlinks aren't resolved automatically
++    // TODO: this kind of call should be moved upwards in the
++    //       class hierarchy to avoid code duplication
++    const QString relativeName = m_workDir.relativeFilePath(fileName) + (trailingSlash ? "/" : "");
+ 
+     KDE_stat(QFile::encodeName(relativeName).constData(), &st);
+     archive_entry_copy_stat(entry, &st);
+diff -Nur kdeutils-4.3.4/ark/plugins/libarchive/libarchivehandler.h kdeutils-4.3.5/ark/plugins/libarchive/libarchivehandler.h
+--- kdeutils-4.3.4/ark/plugins/libarchive/libarchivehandler.h	2009-06-17 22:05:57.000000000 +0200
++++ kdeutils-4.3.5/ark/plugins/libarchive/libarchivehandler.h	2010-01-21 21:47:50.000000000 +0100
+@@ -28,6 +28,7 @@
+ #define LIBARCHIVEHANDLER_H
+ 
+ #include "kerfuffle/archiveinterface.h"
++#include <QDir>
+ #include <QList>
+ #include <QStringList>
+ 
+@@ -57,6 +58,7 @@
+     qlonglong m_currentExtractedFilesSize;
+     bool m_emitNoEntries;
+     qlonglong m_extractedFilesSize;
++    QDir m_workDir;
+     QStringList m_writtenFiles;
+ };
+ 
+diff -Nur kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libbz2.desktop kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libbz2.desktop
+--- kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libbz2.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libbz2.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=kerfuffle_libbz2
+ Name[ar]=kerfuffle_libbz2
+ Name[ca]=kerfuffle_libbz2
++Name[ca@valencia]=kerfuffle_libbz2
+ Name[cs]=kerfuffle_libbz2
+ Name[da]=kerfuffle_libbz2
+ Name[de]=kerfuffle_libbz2
+@@ -53,6 +54,7 @@
+ Comment=libbz2 plugin for Kerfuffle
+ Comment[ar]=ملحق libbz2 لـ Kerfuffle
+ Comment[ca]=Connector del libbz2 pel Kerfuffle
++Comment[ca@valencia]=Connector del libbz2 pel Kerfuffle
+ Comment[cs]=libbz2 modul pro Kerfuffle
+ Comment[da]=libbz2-plugin til Kerfuffle
+ Comment[de]=libgz2-Modul für Kerfuffle
+diff -Nur kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libgz.desktop kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libgz.desktop
+--- kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libgz.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libgz.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -15,6 +15,7 @@
+ Name[ar]=kerfuffle_libgz
+ Name[bg]=kerfuffle_libgz
+ Name[ca]=kerfuffle_libgz
++Name[ca@valencia]=kerfuffle_libgz
+ Name[cs]=kerfuffle_libgz
+ Name[da]=kerfuffle_libgz
+ Name[de]=kerfuffle_libgz
+@@ -61,6 +62,7 @@
+ Comment[ar]=ملحقlibgz لـ Kerfuffle
+ Comment[bg]=Приствка libgz за Kerfuffle
+ Comment[ca]=Connector del libgz pel Kerfuffle
++Comment[ca@valencia]=Connector del libgz pel Kerfuffle
+ Comment[cs]=libgz modul pro Kerfuffle
+ Comment[da]=libgz-plugin til Kerfuffle
+ Comment[de]=libgz-Modul für Kerfuffle
+diff -Nur kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libxz.desktop kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libxz.desktop
+--- kdeutils-4.3.4/ark/plugins/libsinglefileplugin/kerfuffle_libxz.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/ark/plugins/libsinglefileplugin/kerfuffle_libxz.desktop	2010-01-21 21:47:50.000000000 +0100
+@@ -14,6 +14,7 @@
+ Name=kerfuffle_libxz
+ Name[ar]=kerfuffle_libxz
+ Name[ca]=kerfuffle_libxz
++Name[ca@valencia]=kerfuffle_libxz
+ Name[cs]=kerfuffle_libxz
+ Name[da]=kerfuffle_libxz
+ Name[de]=kerfuffle_libxz
+@@ -53,6 +54,7 @@
+ Comment=libxz plugin for Kerfuffle
+ Comment[ar]=ملحقlibxz لـ Kerfuffle
+ Comment[ca]=Connector del libxz pel Kerfuffle
++Comment[ca@valencia]=Connector del libxz pel Kerfuffle
+ Comment[cs]=libxz modul pro Kerfuffle
+ Comment[da]=libxz-plugin til Kerfuffle
+ Comment[de]=libxz-Modul für Kerfuffle
+Binärdateien kdeutils-4.3.4/doc/ark/index.cache.bz2 and kdeutils-4.3.5/doc/ark/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kcalc/index.cache.bz2 and kdeutils-4.3.5/doc/kcalc/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kcharselect/index.cache.bz2 and kdeutils-4.3.5/doc/kcharselect/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kcontrol/blockdevices/index.cache.bz2 and kdeutils-4.3.5/doc/kcontrol/blockdevices/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kdelirc/irkick/index.cache.bz2 and kdeutils-4.3.5/doc/kdelirc/irkick/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kdelirc/kcmlirc/index.cache.bz2 and kdeutils-4.3.5/doc/kdelirc/kcmlirc/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kdf/index.cache.bz2 and kdeutils-4.3.5/doc/kdf/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kfloppy/index.cache.bz2 and kdeutils-4.3.5/doc/kfloppy/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kgpg/index.cache.bz2 and kdeutils-4.3.5/doc/kgpg/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/ktimer/index.cache.bz2 and kdeutils-4.3.5/doc/ktimer/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/kwallet/index.cache.bz2 and kdeutils-4.3.5/doc/kwallet/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/okteta/index.cache.bz2 and kdeutils-4.3.5/doc/okteta/index.cache.bz2 sind verschieden.
+Binärdateien kdeutils-4.3.4/doc/superkaramba/index.cache.bz2 and kdeutils-4.3.5/doc/superkaramba/index.cache.bz2 sind verschieden.
+diff -Nur kdeutils-4.3.4/kcalc/kcalc.desktop kdeutils-4.3.5/kcalc/kcalc.desktop
+--- kdeutils-4.3.4/kcalc/kcalc.desktop	2009-10-02 10:21:54.000000000 +0200
++++ kdeutils-4.3.5/kcalc/kcalc.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -5,6 +5,7 @@
+ Name[bg]=KCalc
+ Name[br]=KCalc
+ Name[ca]=KCalc
++Name[ca@valencia]=KCalc
+ Name[cs]=KCalc
+ Name[cy]=KCalc
+ Name[da]=KCalc
+@@ -70,6 +71,7 @@
+ GenericName[bg]=Калкулатор
+ GenericName[br]=Ur jederez skiantel
+ GenericName[ca]=Calculadora científica
++GenericName[ca@valencia]=Calculadora científica
+ GenericName[cs]=Vědecká kalkulačka
+ GenericName[cy]=Cyfrifydd Gwyddonol
+ GenericName[da]=Videnskabelig regnemaskine
+diff -Nur kdeutils-4.3.4/kcharselect/KCharSelect.desktop kdeutils-4.3.5/kcharselect/KCharSelect.desktop
+--- kdeutils-4.3.4/kcharselect/KCharSelect.desktop	2009-10-02 10:21:52.000000000 +0200
++++ kdeutils-4.3.5/kcharselect/KCharSelect.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -5,6 +5,7 @@
+ GenericName[bg]=Избор на знаци
+ GenericName[br]=Dibaber arouezenn
+ GenericName[ca]=Selector de caràcters
++GenericName[ca@valencia]=Selector de caràcters
+ GenericName[cs]=Vyběr znaků
+ GenericName[cy]=Dewisydd Nod
+ GenericName[da]=Tegnvælger
+@@ -74,6 +75,7 @@
+ Name[bg]=CharSelect
+ Name[br]=KCharSelect
+ Name[ca]=KCharSelect
++Name[ca@valencia]=KCharSelect
+ Name[cs]=KCharSelect
+ Name[cy]=KDewisNod
+ Name[da]=KCharSelect
+diff -Nur kdeutils-4.3.4/kdelirc/irkick/irkick.desktop kdeutils-4.3.5/kdelirc/irkick/irkick.desktop
+--- kdeutils-4.3.4/kdelirc/irkick/irkick.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/kdelirc/irkick/irkick.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[ar]=IRKick
+ Name[br]=IRKick
+ Name[ca]=IRKick
++Name[ca@valencia]=IRKick
+ Name[cs]=IRKick
+ Name[da]=IRKick
+ Name[de]=IRKick
+@@ -54,6 +55,7 @@
+ GenericName[ar]=خادم LIRC لكدى
+ GenericName[br]=Servijer LIRC KDE
+ GenericName[ca]=Servidor LIRC del KDE
++GenericName[ca@valencia]=Servidor LIRC del KDE
+ GenericName[cs]=LIRC server pro KDE
+ GenericName[cy]=Gweinydd LIRC KDE
+ GenericName[da]=KDE LIRC-server
+@@ -115,6 +117,7 @@
+ Comment=KDE Linux infrared remote control server.
+ Comment[ar]=خادم كدى للتحكّم عن بعد بالأشعة تحت الحمراء في لينكس.
+ Comment[ca]=Servidor de control remot per infrarojos del Linux pel KDE
++Comment[ca@valencia]=Servidor de control remot per infrarojos del Linux pel KDE
+ Comment[cs]=Server dálkového ovládání pro KDE.
+ Comment[cy]=Gweinydd rheolydd pell isgoch Linux KDE
+ Comment[da]=KDE server til Linux infrarød fjernbetjening.
+diff -Nur kdeutils-4.3.4/kdelirc/irkick/irkick.notifyrc kdeutils-4.3.5/kdelirc/irkick/irkick.notifyrc
+--- kdeutils-4.3.4/kdelirc/irkick/irkick.notifyrc	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/kdelirc/irkick/irkick.notifyrc	2010-01-21 21:47:49.000000000 +0100
+@@ -3,6 +3,7 @@
+ Comment=Irkick
+ Comment[ar]=Irkick
+ Comment[ca]=Irkick
++Comment[ca@valencia]=Irkick
+ Comment[cs]=Irkick
+ Comment[da]=IRKick
+ Comment[de]=Irkick
+@@ -43,6 +44,7 @@
+ Name=Irkick notification
+ Name[ar]=اشعارات Irkick
+ Name[ca]=Notificació de l'Irkick
++Name[ca@valencia]=Notificació de l'Irkick
+ Name[cs]=Oznámení Irkick
+ Name[da]=IRKick-bekendtgørelse
+ Name[de]=Irkick-Hinweis
+@@ -79,6 +81,7 @@
+ Comment=Irkick global notification event
+ Comment[ar]=حدث اشعار عام لـ Irkick 
+ Comment[ca]=Esdeveniment de notificació global de l'Irkick
++Comment[ca@valencia]=Esdeveniment de notificació global de l'Irkick
+ Comment[da]=IRKick global bekendtgørelseshændelse
+ Comment[de]=Globales Hinweis-Ereignis in Irkick
+ Comment[el]=Irkick γεγονός καθολικής ειδοποίησης 
+@@ -118,6 +121,7 @@
+ Name=Mode event
+ Name[ar]=نمط الأحداث
+ Name[ca]=Esdeveniment de mode
++Name[ca@valencia]=Esdeveniment de mode
+ Name[cs]=Událost režimu
+ Name[da]=Tilstandshændelse
+ Name[de]=Modus-Ereignis
+@@ -155,6 +159,7 @@
+ Comment=Mode has changed
+ Comment[ar]=غير النمط
+ Comment[ca]=El mode ha canviat
++Comment[ca@valencia]=El mode ha canviat
+ Comment[cs]=Režim se změnil
+ Comment[da]=Tilstand er ændret
+ Comment[de]=Der Modus wurde geändert
+@@ -195,6 +200,7 @@
+ Name=Application event
+ Name[ar]=حدث التطبيق
+ Name[ca]=Esdeveniment d'aplicació
++Name[ca@valencia]=Esdeveniment d'aplicació
+ Name[cs]=Událost aplikace
+ Name[da]=Programhændelse
+ Name[de]=Programmereignis
+@@ -232,6 +238,7 @@
+ Comment=Irkick has triggered an application
+ Comment[ar]=أطلق Irkick  تطبيق
+ Comment[ca]=L'Irkick ha activat una aplicació
++Comment[ca@valencia]=L'Irkick ha activat una aplicació
+ Comment[da]=IRKick har startet et program
+ Comment[de]=Irkick hat eine Anwendung ausgelöst
+ Comment[el]=Irkick ενεργοποίησε μία εφαρμογή
+diff -Nur kdeutils-4.3.4/kdelirc/kcmlirc/addaction.cpp kdeutils-4.3.5/kdelirc/kcmlirc/addaction.cpp
+--- kdeutils-4.3.4/kdelirc/kcmlirc/addaction.cpp	2009-10-02 10:21:53.000000000 +0200
++++ kdeutils-4.3.5/kdelirc/kcmlirc/addaction.cpp	2010-01-21 21:47:49.000000000 +0100
+@@ -60,6 +60,7 @@
+ 
+     argumentsModel = new QStandardItemModel(argumentsView);
+     argumentsView->setModel(argumentsModel);
++    argumentsView->setItemDelegate(new ArgumentDelegate());
+ 
+     connect(this, SIGNAL(currentIdChanged(int)), this, SLOT(updateButtonStates()));
+     connect(theChangeMode, SIGNAL(clicked()), this, SLOT(updateButtonStates()));
+diff -Nur kdeutils-4.3.4/kdelirc/kcmlirc/kcm_lirc.desktop kdeutils-4.3.5/kdelirc/kcmlirc/kcm_lirc.desktop
+--- kdeutils-4.3.4/kdelirc/kcmlirc/kcm_lirc.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/kdelirc/kcmlirc/kcm_lirc.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -22,6 +22,7 @@
+ Name=Remote Controls
+ Name[ar]=التحكّم عن بعد
+ Name[ca]=Controls remots
++Name[ca@valencia]=Controls remots
+ Name[cs]=Dálková ovládání
+ Name[cy]=Rheolyddion Pell
+ Name[da]=Fjernbetjeninger
+@@ -74,6 +75,7 @@
+ Comment=Configure your remote controls for use with applications
+ Comment[ar]=إعداد التحكّم عن بعد لاستخدامه في التطبيقات
+ Comment[ca]=Configureu el control remot per usar-lo amb aplicacions
++Comment[ca@valencia]=Configureu el control remot per usar-lo amb aplicacions
+ Comment[cs]=Nastavení dálkových ovladačů
+ Comment[cy]=Ffurfweddu eich rheolyddion pell ar gyfer ddefnydd efo cymhwysiadau
+ Comment[da]=Indstil dine fjernbetjeninger til brug i programmer
+diff -Nur kdeutils-4.3.4/kdessh/kdessh.cpp kdeutils-4.3.5/kdessh/kdessh.cpp
+--- kdeutils-4.3.4/kdessh/kdessh.cpp	2009-06-24 18:36:24.000000000 +0200
++++ kdeutils-4.3.5/kdessh/kdessh.cpp	2010-01-21 21:47:48.000000000 +0100
+@@ -1,6 +1,6 @@
+ /* vi: ts=8 sts=4 sw=4
+  *
+- * $Id: kdessh.cpp 986418 2009-06-24 16:22:23Z kossebau $
++ * $Id: kdessh.cpp 1063316 2009-12-17 20:08:12Z kossebau $
+  *
+  * This file is part of the KDE project, module kdesu.
+  * Copyright (C) 2000 Geert Jansen <jansen@kde.org>
+@@ -110,7 +110,7 @@
+ 
+     // Get remote userid
+     QByteArray user = args->getOption("u").toLocal8Bit();
+-    if (user.isNull())
++    if (user.isEmpty())
+     {
+ 	struct passwd *pw = getpwuid(getuid());
+ 	if (pw == 0L)
+diff -Nur kdeutils-4.3.4/kdf/kcmdf.desktop kdeutils-4.3.5/kdf/kcmdf.desktop
+--- kdeutils-4.3.4/kdf/kcmdf.desktop	2009-10-02 10:21:53.000000000 +0200
++++ kdeutils-4.3.5/kdf/kcmdf.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -17,6 +17,7 @@
+ Name[ar]=أجهزة تخزين
+ Name[bg]=Съхраняващи устройства
+ Name[ca]=Dispositius d'emmagatzemament
++Name[ca@valencia]=Dispositius d'emmagatzemament
+ Name[cs]=Úložná zařízení
+ Name[cy]=Dyfeisiau Storio
+ Name[da]=Lagringsenheder
+@@ -82,6 +83,7 @@
+ Comment[bg]=Показва използваното пространство на монтираните устройства
+ Comment[br]=Diskouez an egor implijet gant an trobarzhelloù marc'het
+ Comment[ca]=Mostra l'ús de disc dels dispositius muntats
++Comment[ca@valencia]=Mostra l'ús de disc dels dispositius muntats
+ Comment[cs]=Zobrazuje využití připojených diskových zařízení
+ Comment[cy]=Dangos defnydd disg y dyfeisiau mowntiedig
+ Comment[da]=Viser monterede enheders diskforbrug
+diff -Nur kdeutils-4.3.4/kdf/kdf.desktop kdeutils-4.3.5/kdf/kdf.desktop
+--- kdeutils-4.3.4/kdf/kdf.desktop	2009-10-02 10:21:53.000000000 +0200
++++ kdeutils-4.3.5/kdf/kdf.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -5,6 +5,7 @@
+ Name[bg]=KDiskFree
+ Name[br]=KDiskFree
+ Name[ca]=KDiskFree
++Name[ca@valencia]=KDiskFree
+ Name[cs]=KDiskFree
+ Name[cy]=KDiskFree
+ Name[da]=KDiskFree
+@@ -67,6 +68,7 @@
+ GenericName[ar]=عرض المستخدم من القرص
+ GenericName[bg]=Свободно място на диска
+ GenericName[ca]=Veure l'ús de disc
++GenericName[ca@valencia]=Veure l'ús de disc
+ GenericName[cs]=Zobrazení využití disku
+ GenericName[cy]=Gweld Defnydd y Disg
+ GenericName[da]=Se diskforbrug
+@@ -116,7 +118,7 @@
+ GenericName[tg]=Назари Истифодабарии Диск
+ GenericName[th]=แสดงการใช้พื้นที่ดิสก์
+ GenericName[tr]=Disk Kullanımını Görüntüle
+-GenericName[uk]=Перегляд використання диску
++GenericName[uk]=Перегляд використання диска
+ GenericName[vi]=Xem đĩa trống 
+ GenericName[wa]=Vey l' eployaedje del deure plake
+ GenericName[xh]=Jonga Ukusebenziseka KweDiskic
+diff -Nur kdeutils-4.3.4/kdf/kwikdisk.desktop kdeutils-4.3.5/kdf/kwikdisk.desktop
+--- kdeutils-4.3.4/kdf/kwikdisk.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kdf/kwikdisk.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -5,6 +5,7 @@
+ Name[bg]=KwikDisk
+ Name[br]=KwikDisk
+ Name[ca]=KwikDisk
++Name[ca@valencia]=KwikDisk
+ Name[cs]=KwikDisk
+ Name[cy]=KwikDisk
+ Name[da]=KwikDisk
+@@ -70,6 +71,7 @@
+ GenericName[bg]=Сменяеми носители
+ GenericName[br]=Ostilh media lem-laka
+ GenericName[ca]=Utilitat per discos extraïbles
++GenericName[ca@valencia]=Utilitat per discos extraïbles
+ GenericName[cs]=Nástroj pro výměnné disky
+ GenericName[cy]=Cyfleuster Cyfryngau Symudadwy
+ GenericName[da]=Værktøj til flytbart medie
+diff -Nur kdeutils-4.3.4/kfloppy/floppy_format.desktop kdeutils-4.3.5/kfloppy/floppy_format.desktop
+--- kdeutils-4.3.4/kfloppy/floppy_format.desktop	2009-10-30 13:32:27.000000000 +0100
++++ kdeutils-4.3.5/kfloppy/floppy_format.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -6,6 +6,7 @@
+ Name[bg]=Форматиране
+ Name[br]=Furmadiñ
+ Name[ca]=Dona format
++Name[ca@valencia]=Dona format
+ Name[cs]=Formátovat
+ Name[cy]=Fformat
+ Name[da]=Format
+diff -Nur kdeutils-4.3.4/kfloppy/KFloppy.desktop kdeutils-4.3.5/kfloppy/KFloppy.desktop
+--- kdeutils-4.3.4/kfloppy/KFloppy.desktop	2009-10-02 10:21:51.000000000 +0200
++++ kdeutils-4.3.5/kfloppy/KFloppy.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -5,6 +5,7 @@
+ GenericName[bg]=Форматиране на дискети
+ GenericName[br]=Furmader pladennig
+ GenericName[ca]=Formatador de disquets
++GenericName[ca@valencia]=Formatador de disquets
+ GenericName[cs]=Formátovač disket
+ GenericName[cy]=Fformatio Disg Meddal
+ GenericName[da]=Disketteformatering
+@@ -71,6 +72,7 @@
+ Name[bg]=KFloppy
+ Name[br]=KFloppy
+ Name[ca]=KFloppy
++Name[ca@valencia]=KFloppy
+ Name[cs]=KFloppy
+ Name[cy]=KFloppy
+ Name[da]=KFloppy
+diff -Nur kdeutils-4.3.4/kgpg/encryptfile.desktop kdeutils-4.3.5/kgpg/encryptfile.desktop
+--- kdeutils-4.3.4/kgpg/encryptfile.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kgpg/encryptfile.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -10,6 +10,7 @@
+ Name[ar]=تشفير ملف
+ Name[bg]=Шифроване на файл
+ Name[ca]=Encripta fitxer
++Name[ca@valencia]=Encripta fitxer
+ Name[cs]=Zašifrovat soubor
+ Name[cy]=Cêl-ysgrifo Ffeil
+ Name[da]=Kryptér fil
+diff -Nur kdeutils-4.3.4/kgpg/encryptfolder.desktop kdeutils-4.3.5/kgpg/encryptfolder.desktop
+--- kdeutils-4.3.4/kgpg/encryptfolder.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kgpg/encryptfolder.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -8,6 +8,7 @@
+ Name[ar]=أرشفة و تشفير مجلّد
+ Name[bg]=Архивиране и шифроване на директория
+ Name[ca]=Arxiva i encripta la carpeta
++Name[ca@valencia]=Arxiva i encripta la carpeta
+ Name[cs]=Archivovat a zašifrovat složku
+ Name[da]=Arkivér og kryptér mappe
+ Name[de]=Ordner packen und verschlüsseln
+diff -Nur kdeutils-4.3.4/kgpg/kgpg.desktop kdeutils-4.3.5/kgpg/kgpg.desktop
+--- kdeutils-4.3.4/kgpg/kgpg.desktop	2009-11-27 14:04:30.000000000 +0100
++++ kdeutils-4.3.5/kgpg/kgpg.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -10,6 +10,7 @@
+ GenericName[bg]=Програма за шифроване
+ GenericName[br]=Ostilh enrinegadur
+ GenericName[ca]=Eina d'encriptatge
++GenericName[ca@valencia]=Eina d'encriptatge
+ GenericName[cs]=Šifrovací nástroj
+ GenericName[cy]=Erfyn Cêl-ysgrifo
+ GenericName[da]=Krypteringsværktøj
+@@ -67,6 +68,7 @@
+ Comment[ar]=واجهة لـ GnuPG
+ Comment[bg]=Клиент за GnuPG
+ Comment[ca]=Un frontal gràfic pel GnuPG
++Comment[ca@valencia]=Un frontal gràfic pel GnuPG
+ Comment[cs]=Rozhraní pro GnuPG
+ Comment[cy]=Blaen-wyneb GnuPG
+ Comment[da]=En GnuPG-brugerflade
+@@ -127,6 +129,7 @@
+ Name[bg]=KGpg
+ Name[br]=KGpg
+ Name[ca]=KGpg
++Name[ca@valencia]=KGpg
+ Name[cs]=KGpg
+ Name[cy]=KGpg
+ Name[da]=KGpg
+diff -Nur kdeutils-4.3.4/kgpg/kgpglibrary.cpp kdeutils-4.3.5/kgpg/kgpglibrary.cpp
+--- kdeutils-4.3.4/kgpg/kgpglibrary.cpp	2009-10-02 10:21:52.000000000 +0200
++++ kdeutils-4.3.5/kgpg/kgpglibrary.cpp	2010-01-21 21:47:48.000000000 +0100
+@@ -162,10 +162,11 @@
+ 	m_pop = new KPassivePopup();
+ 	m_urlselected = src;
+ 
+-	KGpgTextInterface *decryptFileProcess = new KGpgTextInterface();
+-	decryptFileProcess->decryptFile(src, dest, customDecryptOption);
++	KGpgTextInterface *decryptFileProcess = new KGpgTextInterface(this);
+ 	connect(decryptFileProcess, SIGNAL(decryptFileStarted(KUrl)), SLOT(processEncPopup(KUrl)));
+ 	connect(decryptFileProcess, SIGNAL(decryptFileFinished(int, KGpgTextInterface*)), SLOT(processDecOver(int, KGpgTextInterface*)));
++	decryptFileProcess->decryptFile(src, dest, customDecryptOption);
++
+ }
+ 
+ void KgpgLibrary::processDecOver(int ret, KGpgTextInterface *iface)
+diff -Nur kdeutils-4.3.4/kgpg/viewdecrypted.desktop kdeutils-4.3.5/kgpg/viewdecrypted.desktop
+--- kdeutils-4.3.4/kgpg/viewdecrypted.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kgpg/viewdecrypted.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -9,6 +9,7 @@
+ Name[ar]=اعرض ملف مفكوك التشفير
+ Name[bg]=Дешифровани файлове
+ Name[ca]=Mostra el fitxer desencriptat
++Name[ca@valencia]=Mostra el fitxer desencriptat
+ Name[cs]=Zobrazit dešifrovaný soubor
+ Name[da]=Se filen dekrypteret
+ Name[de]=Datei entschlüsselt anzeigen
+diff -Nur kdeutils-4.3.4/ktimer/ktimer.desktop kdeutils-4.3.5/ktimer/ktimer.desktop
+--- kdeutils-4.3.4/ktimer/ktimer.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/ktimer/ktimer.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -3,6 +3,7 @@
+ GenericName[ar]=مطلق العدّ التنازلى
+ GenericName[bg]=Хронометър
+ GenericName[ca]=Executador amb compte enrere
++GenericName[ca@valencia]=Executador amb compte arrere
+ GenericName[cs]=Stopky
+ GenericName[cy]=Cychwynydd Cyfrif yn Ôl
+ GenericName[da]=Nedtællingsstarter
+@@ -61,6 +62,7 @@
+ Name[bg]=KTimer
+ Name[br]=KTimer
+ Name[ca]=KTimer
++Name[ca@valencia]=KTimer
+ Name[cs]=KTimer
+ Name[cy]=KTimer
+ Name[da]=KTimer
+diff -Nur kdeutils-4.3.4/kwallet/konfigurator/kwalletconfig.desktop kdeutils-4.3.5/kwallet/konfigurator/kwalletconfig.desktop
+--- kdeutils-4.3.4/kwallet/konfigurator/kwalletconfig.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kwallet/konfigurator/kwalletconfig.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -16,6 +16,7 @@
+ Name[bg]=KDE Wallet
+ Name[br]=Doug-paperoù KDE
+ Name[ca]=Cartera del KDE
++Name[ca@valencia]=Cartera del KDE
+ Name[cs]=Úschovna KDE
+ Name[cy]=Waled KDE
+ Name[da]=KDE's tegnebog
+@@ -75,6 +76,7 @@
+ Comment[bg]=Настройване на "Портфейл"
+ Comment[br]=Kefluniadur Doug-paperoù KDE
+ Comment[ca]=Configuració de la cartera del KDE
++Comment[ca@valencia]=Configuració de la cartera del KDE
+ Comment[cs]=Nastavení úschovny KDE
+ Comment[cy]=Ffurfweddiad Waled KDE
+ Comment[da]=Konfiguration af KDE's tegnebog
+diff -Nur kdeutils-4.3.4/kwallet/konfigurator/kwalletmanager_show.desktop kdeutils-4.3.5/kwallet/konfigurator/kwalletmanager_show.desktop
+--- kdeutils-4.3.4/kwallet/konfigurator/kwalletmanager_show.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kwallet/konfigurator/kwalletmanager_show.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[bg]=Инструмент за настройване на "Портфейл"
+ Name[br]=Merour an doug-paperoù
+ Name[ca]=Eina de gestió de carteres
++Name[ca@valencia]=Eina de gestió de carteres
+ Name[cs]=Nástroj pro správu úschovny
+ Name[cy]=Erfyn Rheoli Waled
+ Name[da]=Håndteringsværktøj for tegnebog
+diff -Nur kdeutils-4.3.4/kwallet/kwalletmanager.desktop kdeutils-4.3.5/kwallet/kwalletmanager.desktop
+--- kdeutils-4.3.4/kwallet/kwalletmanager.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kwallet/kwalletmanager.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -3,6 +3,7 @@
+ Name[ar]=KWalletManager
+ Name[bg]=KWalletManager
+ Name[ca]=KWalletManager
++Name[ca@valencia]=KWalletManager
+ Name[cs]=KWalletManager
+ Name[da]=KWalletManager
+ Name[de]=Verwaltung für digitale Brieftasche
+@@ -48,6 +49,7 @@
+ GenericName[ar]=أداة إدارة المحفظة
+ GenericName[bg]=Управление на "Портфейл"
+ GenericName[ca]=Eina de gestió de carteres
++GenericName[ca@valencia]=Eina de gestió de carteres
+ GenericName[cs]=Nástroj pro správu úschovny
+ GenericName[da]=Værktøj til håndtering af tegnebog
+ GenericName[de]=Verwaltung für digitale Brieftasche
+diff -Nur kdeutils-4.3.4/kwallet/kwalletmanager-kwalletd.desktop kdeutils-4.3.5/kwallet/kwalletmanager-kwalletd.desktop
+--- kdeutils-4.3.4/kwallet/kwalletmanager-kwalletd.desktop	2009-10-30 13:32:29.000000000 +0100
++++ kdeutils-4.3.5/kwallet/kwalletmanager-kwalletd.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[bg]=Инструмент за настройване на "Портфейл"
+ Name[br]=Merour an doug-paperoù
+ Name[ca]=Eina de gestió de carteres
++Name[ca@valencia]=Eina de gestió de carteres
+ Name[cs]=Nástroj pro správu úschovny
+ Name[cy]=Erfyn Rheoli Waled
+ Name[da]=Håndteringsværktøj for tegnebog
+diff -Nur kdeutils-4.3.4/okteta/parts/kbytesedit/kbytearrayedit.desktop kdeutils-4.3.5/okteta/parts/kbytesedit/kbytearrayedit.desktop
+--- kdeutils-4.3.4/okteta/parts/kbytesedit/kbytearrayedit.desktop	2009-10-30 13:32:27.000000000 +0100
++++ kdeutils-4.3.5/okteta/parts/kbytesedit/kbytearrayedit.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[ar]=كائن BytesEdit
+ Name[bg]=Джаджа BytesEdit
+ Name[ca]=Estri BytesEdit
++Name[ca@valencia]=Estri BytesEdit
+ Name[cs]=BytesEdit Widget
+ Name[cy]=Celfigyn GolyguBeit
+ Name[da]=BytesEdit Widget
+diff -Nur kdeutils-4.3.4/okteta/parts/kpart/oktetapart.desktop kdeutils-4.3.5/okteta/parts/kpart/oktetapart.desktop
+--- kdeutils-4.3.4/okteta/parts/kpart/oktetapart.desktop	2009-10-30 13:32:27.000000000 +0100
++++ kdeutils-4.3.5/okteta/parts/kpart/oktetapart.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -6,6 +6,7 @@
+ Name[bg]=Вграден двоичен преглед
+ Name[br]=Gweler HTML enframmus
+ Name[ca]=Visor binari encastat
++Name[ca@valencia]=Visor binari encastat
+ Name[cs]=Zabudovaný binární prohlížeč
+ Name[da]=Indlejret binær fremviser
+ Name[de]=Eingebettetes Anzeigeprogramm für Binärdateien
+@@ -45,8 +46,8 @@
+ Name[ru]=Компонент просмотра двоичных данных
+ Name[sk]=Vložený binárny prehliadač
+ Name[sl]=Vgradni binarni pregledovalnik
+-Name[sr]=Угњеждени бинарни приказивач
+-Name[sr@latin]=Ugnježdeni binarni prikazivač
++Name[sr]=Угнежђени бинарни приказивач
++Name[sr@latin]=Ugnežđeni binarni prikazivač
+ Name[sv]=Inbäddad binärvisning
+ Name[ta]=உட்பொதிந்த இருநிலை காட்சியாளன்
+ Name[th]=เครื่องมือดูเลขฐานสองแบบฝังตัวได้
+@@ -60,6 +61,7 @@
+ Comment[bg]=Вграден двоичен преглед
+ Comment[br]=Gweler HTML enframmus
+ Comment[ca]=Visor binari encastat
++Comment[ca@valencia]=Visor binari encastat
+ Comment[cs]=Zabudovaný binární prohlížeč
+ Comment[da]=Indlejret binær fremviser
+ Comment[de]=Eingebettetes Anzeigeprogramm für Binärdateien
+@@ -99,8 +101,8 @@
+ Comment[ru]=Компонент просмотра двоичных данных
+ Comment[sk]=Vložený binárny prehliadač
+ Comment[sl]=Vgradni binarni pregledovalnik
+-Comment[sr]=Угњеждени бинарни приказивач
+-Comment[sr@latin]=Ugnježdeni binarni prikazivač
++Comment[sr]=Угнежђени бинарни приказивач
++Comment[sr@latin]=Ugnežđeni binarni prikazivač
+ Comment[sv]=Inbäddad binärvisning
+ Comment[ta]=உட்பொதிந்த இருநிலை காட்சியாளன்
+ Comment[th]=เครื่องมือดูเลขฐานสองแบบฝังตัวได้
+diff -Nur kdeutils-4.3.4/okteta/program/okteta.desktop kdeutils-4.3.5/okteta/program/okteta.desktop
+--- kdeutils-4.3.4/okteta/program/okteta.desktop	2009-10-30 13:32:27.000000000 +0100
++++ kdeutils-4.3.5/okteta/program/okteta.desktop	2010-01-21 21:47:48.000000000 +0100
+@@ -3,6 +3,7 @@
+ Name[ar]=أكتيتا
+ Name[bg]=Okteta
+ Name[ca]=Okteta
++Name[ca@valencia]=Okteta
+ Name[cs]=Okteta
+ Name[da]=Okteta
+ Name[de]=Okteta
+@@ -49,6 +50,7 @@
+ GenericName[ar]=محرر Hex
+ GenericName[bg]=Редактор Hex
+ GenericName[ca]=Editor hexadecimal
++GenericName[ca@valencia]=Editor hexadecimal
+ GenericName[cs]=Binární editor
+ GenericName[da]=Hex-editor
+ GenericName[de]=Hex-Editor
+diff -Nur kdeutils-4.3.4/okteta/program/oktetakakao/io/kbytearrayvaluestreamencoder.cpp kdeutils-4.3.5/okteta/program/oktetakakao/io/kbytearrayvaluestreamencoder.cpp
+--- kdeutils-4.3.4/okteta/program/oktetakakao/io/kbytearrayvaluestreamencoder.cpp	2008-11-19 11:17:39.000000000 +0100
++++ kdeutils-4.3.5/okteta/program/oktetakakao/io/kbytearrayvaluestreamencoder.cpp	2010-01-21 21:47:48.000000000 +0100
+@@ -52,7 +52,7 @@
+     // settings
+     mSettings.undefinedChar = byteArrayView->undefinedChar();
+     mSettings.substituteChar = byteArrayView->substituteChar();
+-//     mSettings.valueCoding = (KHECore::ValueCoding)byteArrayView->valueCoding();
++    mSettings.valueCoding = (KHECore::ValueCoding)byteArrayView->valueCoding();
+ 
+     // encode
+     QTextStream textStream( device );
+diff -Nur kdeutils-4.3.4/printer-applet/printer-applet.desktop kdeutils-4.3.5/printer-applet/printer-applet.desktop
+--- kdeutils-4.3.4/printer-applet/printer-applet.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/printer-applet/printer-applet.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -3,6 +3,7 @@
+ Name[ar]=بريمج الطباعة
+ Name[bg]=Аплет на принтер
+ Name[ca]=Miniaplicació d'impressió
++Name[ca@valencia]=Miniaplicació d'impressió
+ Name[cs]=Tiskový applet
+ Name[da]=Printerapplet
+ Name[de]=Drucker-Miniprogramm
+@@ -49,6 +50,7 @@
+ Comment[ar]=الأيقونة المصغرة لرسائل عمل الطباعة
+ Comment[bg]=Икона в системния панел за задачите на принтера
+ Comment[ca]=Icona de la safata del sistema per gestionar els treballs d'impressió
++Comment[ca@valencia]=Icona de la safata del sistema per gestionar els treballs d'impressió
+ Comment[cs]=Ikona v systémové části panelu pro správu úloh tisku
+ Comment[da]=Statusikon til håndtering af udskriftsjob
+ Comment[de]=Symbol für die Druckerverwaltung, dargestellt im Systemabschnitt der Kontrollleiste
+diff -Nur kdeutils-4.3.4/printer-applet/printer-applet.notifyrc kdeutils-4.3.5/printer-applet/printer-applet.notifyrc
+--- kdeutils-4.3.4/printer-applet/printer-applet.notifyrc	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/printer-applet/printer-applet.notifyrc	2010-01-21 21:47:49.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[ar]=بريمج الطباعة
+ Name[bg]=Аплет на принтер
+ Name[ca]=Miniaplicació d'impressió
++Name[ca@valencia]=Miniaplicació d'impressió
+ Name[cs]=Tiskový applet
+ Name[da]=Printerapplet
+ Name[de]=Drucker-Miniprogramm
+@@ -49,6 +50,7 @@
+ Comment=Printer Applet
+ Comment[ar]=بريمج الطباعة
+ Comment[ca]=Miniaplicació d'impressora
++Comment[ca@valencia]=Miniaplicació d'impressora
+ Comment[cs]=Tiskový applet
+ Comment[da]=Printer-applet
+ Comment[de]=Drucker-Miniprogramm
+@@ -91,6 +93,7 @@
+ Name=New Printer
+ Name[ar]=طابعة جديدة
+ Name[ca]=Nova impressora
++Name[ca@valencia]=Nova impressora
+ Name[cs]=Nová tiskárna
+ Name[da]=Ny printer
+ Name[de]=Neuer Drucker
+@@ -132,6 +135,7 @@
+ Comment=Configuring New Printer
+ Comment[ar]=يضبط الطابعة الجديدة
+ Comment[ca]=S'està configurant la impressora nova
++Comment[ca@valencia]=S'està configurant la impressora nova
+ Comment[cs]=Probíhá nastavení nové tiskárny
+ Comment[da]=Indstilling af ny printer
+ Comment[de]=Neuen Drucker einrichten
+@@ -175,6 +179,7 @@
+ Name=Printer Added
+ Name[ar]=أضيفت طابعة
+ Name[ca]=S'ha afegit la impressora
++Name[ca@valencia]=S'ha afegit la impressora
+ Name[cs]=Tiskárna přidána
+ Name[da]=Printer tilføjet
+ Name[de]=Drucker hinzugefügt
+@@ -215,6 +220,7 @@
+ Comment=Printer Added
+ Comment[ar]=أضيفت طباعة
+ Comment[ca]=S'ha afegit la impressora
++Comment[ca@valencia]=S'ha afegit la impressora
+ Comment[cs]=Tiskárna přidána
+ Comment[da]=Printer tilføjet
+ Comment[de]=Drucker hinzugefügt
+@@ -258,6 +264,7 @@
+ Name=Missing Printer Driver
+ Name[ar]=مشغل الطابعة مفقود
+ Name[ca]=Falta el controlador de la impressora
++Name[ca@valencia]=Falta el controlador de la impressora
+ Name[cs]=Chybí ovladač tiskárny
+ Name[da]=Manglende printerdriver
+ Name[de]=Fehlender Druckertreiber
+@@ -298,6 +305,7 @@
+ Comment=Missing Printer Driver
+ Comment[ar]=مشغل الطابعة مفقود
+ Comment[ca]=Falta el controlador de la impressora
++Comment[ca@valencia]=Falta el controlador de la impressora
+ Comment[cs]=Chybí ovladač tiskárny
+ Comment[da]=Manglende printerdriver
+ Comment[de]=Fehlender Druckertreiber
+@@ -341,6 +349,7 @@
+ Name=Other
+ Name[ar]=أخرى
+ Name[ca]=Altres
++Name[ca@valencia]=Altres
+ Name[cs]=Jiný
+ Name[da]=Andet
+ Name[de]=Andere
+@@ -382,6 +391,7 @@
+ Comment=Other
+ Comment[ar]=أخرى
+ Comment[ca]=Altres
++Comment[ca@valencia]=Altres
+ Comment[cs]=Jiný
+ Comment[da]=Andet
+ Comment[de]=Andere
+diff -Nur kdeutils-4.3.4/superkaramba/plasma/plasma-package-superkaramba.desktop kdeutils-4.3.5/superkaramba/plasma/plasma-package-superkaramba.desktop
+--- kdeutils-4.3.4/superkaramba/plasma/plasma-package-superkaramba.desktop	2009-10-30 13:32:32.000000000 +0100
++++ kdeutils-4.3.5/superkaramba/plasma/plasma-package-superkaramba.desktop	2010-01-21 21:47:51.000000000 +0100
+@@ -3,6 +3,7 @@
+ Name[ar]=ملفات سوبركارامبا
+ Name[bg]=Теми за SuperKaramba
+ Name[ca]=Fitxers de temes del SuperKaramba
++Name[ca@valencia]=Fitxers de temes del SuperKaramba
+ Name[cs]=Soubory motivu Superkaramba
+ Name[da]=SuperKaramba temafiler
+ Name[de]=SuperKaramba Design-Dateien
+@@ -49,6 +50,7 @@
+ Comment[ar]=سمات كارامبا لسطح المكتب
+ Comment[bg]=Теми за Karamba
+ Comment[ca]=Temes d'escriptori del Karamba
++Comment[ca@valencia]=Temes d'escriptori del Karamba
+ Comment[cs]=Motivy plochy Karamba
+ Comment[da]=Karamba desktoptemaer
+ Comment[de]=Karamba Arbeitsflächendesigns
+diff -Nur kdeutils-4.3.4/superkaramba/plasma/plasma-scriptengine-superkaramba.desktop kdeutils-4.3.5/superkaramba/plasma/plasma-scriptengine-superkaramba.desktop
+--- kdeutils-4.3.4/superkaramba/plasma/plasma-scriptengine-superkaramba.desktop	2009-10-30 13:32:32.000000000 +0100
++++ kdeutils-4.3.5/superkaramba/plasma/plasma-scriptengine-superkaramba.desktop	2010-01-21 21:47:51.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[bg]=SuperKaramba
+ Name[br]=SuperKaramba
+ Name[ca]=SuperKaramba
++Name[ca@valencia]=SuperKaramba
+ Name[cs]=SuperKaramba
+ Name[cy]=SuperKaramba
+ Name[da]=SuperKaramba
+@@ -58,6 +59,7 @@
+ Comment[ar]=سمة كارامبا لسطح المكتب
+ Comment[bg]=Теми за Karamba
+ Comment[ca]=Tema d'escriptori del Karamba
++Comment[ca@valencia]=Tema d'escriptori del Karamba
+ Comment[cs]=Motiv plochy Karamba
+ Comment[da]=Karamba desktoptema
+ Comment[de]=Karamba Arbeitsflächendesign
+diff -Nur kdeutils-4.3.4/superkaramba/plasma/plasma-skapplet-default.desktop kdeutils-4.3.5/superkaramba/plasma/plasma-skapplet-default.desktop
+--- kdeutils-4.3.4/superkaramba/plasma/plasma-skapplet-default.desktop	2009-10-30 13:32:32.000000000 +0100
++++ kdeutils-4.3.5/superkaramba/plasma/plasma-skapplet-default.desktop	2010-01-21 21:47:51.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[bg]=SuperKaramba
+ Name[br]=SuperKaramba
+ Name[ca]=SuperKaramba
++Name[ca@valencia]=SuperKaramba
+ Name[cs]=SuperKaramba
+ Name[cy]=SuperKaramba
+ Name[da]=SuperKaramba
+@@ -58,6 +59,7 @@
+ Comment[ar]=بريمج بلازما سوبركارامبا
+ Comment[bg]=Plasma аплет за SuperKaramba
+ Comment[ca]=Miniaplicació plasma del SuperKaramba
++Comment[ca@valencia]=Miniaplicació plasma del SuperKaramba
+ Comment[cs]=Superkaramba applet
+ Comment[da]=SuperKaramba-plasmoid
+ Comment[de]=SuperKaramba Plasma-Miniprogramm
+@@ -99,7 +101,7 @@
+ Comment[ta]=சூப்பர் கரம்பா ப்ளாஸ்மா குறுநிரல்
+ Comment[th]=แอพเพล็ต SuperKaramba ของพลาสมา
+ Comment[tr]=SuperKaramba Plasma Programcığı
+-Comment[uk]=Аплет SuperKaramba Plasma
++Comment[uk]=Аплет Плазми SuperKaramba
+ Comment[x-test]=xxSuperKaramba Plasma Appletxx
+ Comment[zh_CN]=SuperKaramba Plasma 小程序
+ Comment[zh_TW]=SuperKaramba Plasma 小程式
+diff -Nur kdeutils-4.3.4/superkaramba/src/superkaramba.desktop kdeutils-4.3.5/superkaramba/src/superkaramba.desktop
+--- kdeutils-4.3.4/superkaramba/src/superkaramba.desktop	2009-10-30 13:32:31.000000000 +0100
++++ kdeutils-4.3.5/superkaramba/src/superkaramba.desktop	2010-01-21 21:47:51.000000000 +0100
+@@ -4,6 +4,7 @@
+ Name[bg]=SuperKaramba
+ Name[br]=SuperKaramba
+ Name[ca]=SuperKaramba
++Name[ca@valencia]=SuperKaramba
+ Name[cs]=SuperKaramba
+ Name[cy]=SuperKaramba
+ Name[da]=SuperKaramba
+@@ -62,6 +63,7 @@
+ Comment[ar]=محرك لجماليات سطح مكتب لطيفة.
+ Comment[bg]=Модул за разкрасяване на работния плот.
+ Comment[ca]=Un motor per fer més vistós l'escriptori.
++Comment[ca@valencia]=Un motor per fer més vistós l'escriptori.
+ Comment[cs]=Nástroj pro úžasnou pracovní plochu, která je pastvou pro oči.
+ Comment[da]=En motor for smart øjeguf på skrivebordet.
+ Comment[de]=Infrastruktur für faszinierende optische Effekte
+@@ -114,6 +116,7 @@
+ GenericName[ar]=قطع سطح المكتب
+ GenericName[bg]=Джаджи
+ GenericName[ca]=Estris de l'escriptori
++GenericName[ca@valencia]=Estris de l'escriptori
+ GenericName[cs]=Udělátka pro pracovní plochu
+ GenericName[da]=Skrivebords-widgets
+ GenericName[de]=Arbeitsflächen-Erweiterungen
+diff -Nur kdeutils-4.3.4/sweeper/sweeper.desktop kdeutils-4.3.5/sweeper/sweeper.desktop
+--- kdeutils-4.3.4/sweeper/sweeper.desktop	2009-10-30 13:32:30.000000000 +0100
++++ kdeutils-4.3.5/sweeper/sweeper.desktop	2010-01-21 21:47:49.000000000 +0100
+@@ -11,6 +11,7 @@
+ Name[ar]=الكناس
+ Name[bg]=Sweeper
+ Name[ca]=Sweeper
++Name[ca@valencia]=Sweeper
+ Name[cs]=Zametač
+ Name[da]=Sweeper
+ Name[de]=Sweeper
+@@ -60,6 +61,7 @@
+ GenericName[ar]=منظف النظام
+ GenericName[bg]=Почистване на системата
+ GenericName[ca]=Netejador del sistema
++GenericName[ca@valencia]=Netejador del sistema
+ GenericName[cs]=Vyčištění systému
+ GenericName[da]=Systemoprydning
+ GenericName[de]=System aufräumen

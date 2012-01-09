@@ -1,0 +1,43 @@
+diff -up kdeutils-4.3.4/ark/part/arkviewer.cpp.me kdeutils-4.3.4/ark/part/arkviewer.cpp
+--- kdeutils-4.3.4/ark/part/arkviewer.cpp.me	2010-06-24 23:51:51.493447117 +0200
++++ kdeutils-4.3.4/ark/part/arkviewer.cpp	2010-06-24 23:53:46.334460739 +0200
+@@ -34,6 +34,7 @@
+ #include <KPushButton>
+ #include <KRun>
+ #include <KIO/NetAccess>
++#include <khtml_part.h>
+ 
+ #include <QHBoxLayout>
+ #include <QFrame>
+@@ -187,6 +188,19 @@ bool ArkViewer::viewInInternalViewer(con
+                 SLOT(slotOpenUrlRequestDelayed(KUrl, KParts::OpenUrlArguments, KParts::BrowserArguments)));
+     }
+ 
++    // #235546
++    // TODO: the user should be warned in a non-intrusive way that some features are going to be disabled
++    //       maybe there should be an option controlling this
++    KHTMLPart *khtmlPart = qobject_cast<KHTMLPart*>(m_part);
++    if (khtmlPart) {
++        kDebug() << "Disabling javascripts, plugins, java and external references for KHTMLPart";
++        khtmlPart->setJScriptEnabled(false);
++        khtmlPart->setJavaEnabled(false);
++        khtmlPart->setPluginsEnabled(false);
++        khtmlPart->setMetaRefreshEnabled(false);
++        khtmlPart->setOnlyLocalReferences(true);
++    }
++
+     m_part->openUrl(filename);
+ 
+     return true;
+diff -up kdeutils-4.3.4/ark/part/CMakeLists.txt.me kdeutils-4.3.4/ark/part/CMakeLists.txt
+--- kdeutils-4.3.4/ark/part/CMakeLists.txt.me	2010-06-24 23:49:31.524983809 +0200
++++ kdeutils-4.3.4/ark/part/CMakeLists.txt	2010-06-24 23:51:14.182461370 +0200
+@@ -21,7 +21,7 @@ kde4_add_ui_files(arkpart_PART_SRCS jobt
+ kde4_add_plugin(arkpart WITH_PREFIX ${arkpart_PART_SRCS})
+ 
+ 
+-target_link_libraries(arkpart kerfuffle ${KDE4_KFILE_LIBS} ${KDE4_KPARTS_LIBS})
++target_link_libraries(arkpart kerfuffle ${KDE4_KFILE_LIBS} ${KDE4_KPARTS_LIBS} ${KDE4_KHTML_LIBS})
+ 
+ install(TARGETS arkpart  DESTINATION ${PLUGIN_INSTALL_DIR})
+ 
